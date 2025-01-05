@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.bl_info {
+  background-color: $main-color;
+  padding-bottom: rem(48);
+}
+
+.bl_info .el_sec_mainTtl {
+  margin-bottom: rem(24);
+}

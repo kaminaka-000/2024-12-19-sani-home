@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.el_sec_mainTtl {
+  text-align: center;
+  font-size: rem(18);
+}
+
+.el_sec_mainTtl .el_sec_mainTtl__spaced {
+  letter-spacing: 1.44px;
+  @include mq(md){
+    letter-spacing: 1.92px;
+  }
+}

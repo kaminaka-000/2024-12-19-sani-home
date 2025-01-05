@@ -1,0 +1,100 @@
+@use "global" as *;
+
+.bl_staff {
+  padding: rem(48) 0;
+  background-color: $main-color;
+  @include mq(md){
+    padding: rem(104) 0 rem(170) 0;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.bl_staff::after {
+  display: none;
+  @include mq(md){
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(../images/common/staff_img.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: rem(448);
+    width: 100%;
+    height: rem(448);
+    border-radius: 50%;
+    top: 15%;
+    left: calc(50% - min(57vw, 48.4rem));
+  }
+  @media (max-width: 1220px) and (min-width: 1086px) {
+    left: calc(48% - min(57vw, 48.4rem));
+    max-width: rem(400);
+    height: rem(400);
+  }
+  @media (max-width: 1085px) and (min-width: 767px) {
+    left: calc(48% - min(63vw, 48.4rem));
+    max-width: rem(380);
+    height: rem(380);
+  }
+}
+
+.bl_staff::before {
+  display: none;
+  @include mq(md){
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(../images/common/staff_img_facilityPc.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: rem(384);
+    width: 100%;
+    height: rem(384);
+    border-radius: 50%;
+    top: -13%;
+    right: -4%;
+    right: calc(50% - min(54vw, 45.4rem));
+    @media (max-width: 1060px) and (min-width: 767px) {
+      right: calc(50% - min(59vw, 45.4rem));
+    }
+  }
+}
+
+.bl_staff .el_sec_mainTtl {
+  margin-bottom: rem(24);
+  @include mq(md){
+    margin-bottom: rem(64);
+  }
+}
+
+.bl_staff_img {
+  aspect-ratio: 164 / 164;
+  max-width: rem(164);
+  width: 100%;
+  margin-inline: auto;
+  margin-bottom: rem(24);
+  display: block;
+  @include mq(md){
+    display: none;
+  }
+}
+
+.bl_staff_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.bl_staff_txt {
+  font-size: rem(16);
+  @include mq(md){
+    max-width: rem(488);
+    font-size: rem(20);
+    line-height: 2.4;
+    text-align: center;
+    margin-inline: auto;
+  }
+}

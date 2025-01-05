@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.bl_btnList {
+  @include mq(md){
+    display: flex;
+    flex-direction: row-reverse;
+    gap: rem(80);
+  }
+  @media (max-width: 1000px) and (min-width: 767px) {
+    gap: rem(30);
+  }
+}
+
+.bl_btnList_item {
+  text-align: center;
+}
+
+.bl_btnList_item + .bl_btnList_item {
+  margin-top: rem(24);
+  @include mq(md){
+    margin-top: 0;
+  }
+}

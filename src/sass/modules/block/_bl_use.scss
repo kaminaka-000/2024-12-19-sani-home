@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.bl_use {
+  background-color: $main-color;
+  padding: rem(48) 0 rem(56) 0;
+  @include mq(md){
+    padding: rem(64) 0 rem(104) 0;
+  }
+}
+
+.bl_use .ly_cont_inner {
+  padding: 0 rem(58);
+  @include mq(md){
+    padding: 0 rem(24);
+  }
+}
+
+.bl_use .el_sec_mainTtl {
+  margin-bottom: rem(32);
+  @include mq(md){
+    margin-bottom: rem(64);
+  }
+}

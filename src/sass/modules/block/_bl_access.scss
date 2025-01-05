@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.bl_access {
+  background-color: $sub-color;
+  padding: rem(48) 0 rem(64) 0;
+  @include mq(md){
+    padding: rem(64) 0;
+  }
+}
+
+.bl_access .ly_cont_inner {
+  padding: 0 rem(40);
+}
+
+.bl_access .el_sec_mainTtl {
+  margin-bottom: rem(24);
+  @include mq(md){
+    margin-bottom: rem(64);
+  }
+}

@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.ly_cont_inner {
+  padding: 0 rem(24);
+  max-width: rem(600);
+  margin-inline: auto;
+  @include mq(md){
+    max-width: rem(1012);
+  }
+}

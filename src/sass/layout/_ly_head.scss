@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.ly_head {
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: rem(72);
+  background: rgba(255, 255, 255, 0.80);
+  @include mq(md){
+    height: rem(96);
+  }
+}
+
+.ly_head_inner {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 rem(34) 0 rem(24);
+  @include mq(md){
+    padding: 0 rem(25);
+  }
+}

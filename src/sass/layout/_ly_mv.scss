@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.ly_mv {
+  position: relative;
+  height: 100vh;
+  min-height: rem(400);
+}

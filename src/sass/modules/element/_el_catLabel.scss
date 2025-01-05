@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.el_catLabel {
+  font-size: rem(10);
+  font-weight: $normal;
+  @include mq(md){
+    font-size: rem(16);
+    white-space: nowrap;
+  }
+}

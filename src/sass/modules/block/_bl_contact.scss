@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.bl_contact {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  @include mq(md){
+    display: none;
+  }
+}
+
+.bl_contact_wrapper {
+  background-color: $accent-color-light;
+  border-radius: 50%;
+  padding: rem(8);
+}
+
+.bl_contact img{
+  max-width: rem(22);
+  height: rem(22);
+  width: 100%;
+}
+
+.bl_contact span {
+  display: block;
+  font-size: rem(6);
+  font-weight: $medium;
+  letter-spacing: 0.48px;
+  margin-top: rem(3);
+}

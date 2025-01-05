@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.bl_media {
+  @include mq(md){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(61);
+  }
+}
+
+.bl_media_iframeWrapper {
+  aspect-ratio: 294/220;
+  margin-bottom: rem(8);
+  @include mq(md){
+    aspect-ratio: 339/254;
+    width: rem(339);
+  }
+}
+
+.bl_media_iframeWrapper iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bl_media_body {
+  font-size: rem(16);
+  line-height: 2;
+  @include mq(md){
+    line-height: 2.5;
+  }
+}

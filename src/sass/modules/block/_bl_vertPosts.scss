@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.bl_vertPostsUnit {
+  background-color: $sub-color;
+  border-radius: rem(10);
+  padding: rem(16) rem(18);
+  @include mq(md){
+    padding: rem(8) rem(37);
+  }
+}
+
+.bl_vertPosts:not(:last-child) {
+  border-bottom: 1px solid #4D4237;
+
+}
+
+.bl_vertPosts a {
+  display: flex;
+  align-items: center;
+  gap: rem(11.21);
+  padding: rem(8) 0;
+  @include mq(md){
+    padding: rem(24) 0 rem(19) 0;
+    gap: rem(125);
+  }
+}
+
+.bl_vertPosts_date {
+  font-size: rem(10);
+  font-weight: $normal;
+  @include mq(md){
+    font-size: rem(13);
+  }
+}
+
+.bl_vertPosts_body {
+  @include mq(md){
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+  }
+}
+
+.bl_vertPosts_ttl {
+  font-size: rem(12);
+  font-weight: $normal;
+  @include mq(md){
+    font-size: rem(16);
+  }
+}

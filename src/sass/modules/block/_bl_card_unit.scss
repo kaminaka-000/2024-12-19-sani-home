@@ -1,0 +1,110 @@
+@use "global" as *;
+
+.bl_card_unit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(21);
+  @include mq(md){
+    gap: rem(72);
+  }
+}
+
+.bl_card_wrapper {
+  background-color: $white;
+  padding: rem(24) rem(16);
+  @include mq(md){
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    gap: rem(56);
+  }
+}
+
+.bl_card_wrapper:nth-child(even) {
+  @include mq(md){
+    flex-direction: row-reverse;
+  }
+}
+
+.bl_card_item {
+  @include mq(md){
+    background-color: $white;
+    padding: rem(10) rem(12);
+  }
+}
+
+.bl_card_ttl {
+  font-size: rem(16);
+  letter-spacing: 1.28px;
+  margin-bottom: rem(16);
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  @include mq(md){
+    font-size: rem(24);
+    letter-spacing: 1.92px;
+    margin-bottom: rem(19);
+    gap: rem(24);
+  }
+}
+
+.bl_card_ttl span {
+  font-size: rem(20);
+  background-color: $accent-color-light;
+  letter-spacing: 1.6px;
+  padding: rem(5) rem(10);
+  margin-left: rem(8);
+  @include mq(md){
+    font-size: rem(32);
+    letter-spacing: 2.56px;
+    padding: rem(5) rem(12);
+    margin-left: 0;
+  }
+}
+
+.bl_card_imgWrapper {
+  display: block;
+  margin-bottom: rem(24);
+  aspect-ratio: 294 / 196;
+  width: 100%;
+  @include mq(md){
+    display: none;
+  }
+}
+
+.bl_card_imgWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bl_card_txt {
+  font-size: rem(16);
+  letter-spacing: 1.28px;
+  position: relative;
+  margin-left: rem(17);
+}
+
+.bl_card_txt::before {
+  content: "・";
+  position: absolute;
+  left: rem(-14);
+  top: 0;
+}
+
+.bl_card_imgSecondary {
+  display: none;
+  @include mq(md){
+    display: block;
+    aspect-ratio: 280/189;
+    max-width: rem(280);
+    width: 100%;
+  }
+}
+
+.bl_card_imgSecondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

@@ -1,0 +1,81 @@
+@use "global" as *;
+
+.bl_flow {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: rem(56);
+  padding-bottom: rem(56);
+  @include mq(md){
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem(40);
+    padding-bottom: rem(72);
+  }
+}
+
+.bl_flow_item {
+  border: 2px solid $accent-color-dark;
+  background-color: $white;
+  text-align: center;
+  padding: rem(8) rem(22) rem(33) rem(22);
+  min-height: rem(280);
+  position: relative;
+  @include mq(md){
+    min-height: rem(256);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.bl_flow_item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  background-image: url(../images/common/flow_triangle.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: rem(24);
+  height: rem(24);
+  top: 111%;
+  transform: translateY(-50%) translateX(-50%);
+  @include mq(md){
+    display: none;
+  }
+}
+
+.bl_flow_item:not(:last-child)::before {
+  @include mq(md){
+    position: absolute;
+    content: "";
+    background-image: url(../images/common/flow_right.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: rem(24);
+    height: rem(24);
+    right: -17%;
+    top: 53%;
+  }
+}
+
+.bl_flow_number {
+  font-size: rem(32);
+  letter-spacing: 2.56px;
+  margin-bottom: rem(13);
+  font-weight: $medium;
+}
+
+.bl_flow_ttl {
+  font-size: rem(18);
+  letter-spacing: 1.44px;
+  margin-bottom: rem(24);
+  font-weight: $medium;
+  flex-grow: 1;
+}
+
+.bl_flow_txt {
+  font-size: rem(16);
+  letter-spacing: 1.28px;
+  max-width: rem(164);
+  margin-inline: auto;
+}

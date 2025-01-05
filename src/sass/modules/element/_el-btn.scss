@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.bl_head_btn {
+  display: inline-block;
+  padding: rem(14) rem(40);
+  background-color: $accent-color-light;
+  color: #4E4E4E;
+  box-shadow: 0px 4px 4px 0px;
+  border-radius: rem(32);
+  position: relative;
+  height: initial;
+}

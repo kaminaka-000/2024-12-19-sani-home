@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.ly_foot {
+  background-color: #ECE8D7;
+  @include mq(md){
+    background-color: #F3E7C9;
+  }
+}
+
+.ly_foot_inner {
+  padding: rem(32) 0 rem(48) 0;
+  @include mq(md){
+    padding: rem(24) 0 rem(64) 0;
+  }
+}

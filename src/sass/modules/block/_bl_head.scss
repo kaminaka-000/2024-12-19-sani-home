@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.bl_head {
+  height: inherit;
+}
+
+.bl_head_logo {
+  height: inherit;
+  max-width: rem(151);
+  width: 100%;
+  @include mq(md){
+    max-width: rem(248);
+  }
+}
+
+.bl_head_logo a {
+  display: flex;
+  height: inherit;
+  align-items: center;
+}
+
+.bl_head_logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.bl_head_box {
+  display: flex;
+  height: inherit;
+  gap: rem(18);
+  @include mq(md){
+    display: none;
+  }
+}
+
+.bl_head_burgerWrapper {
+  order: 2;
+  height: inherit;
+}

@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.bl_service {
+  padding: rem(53.17) 0 rem(48) 0;
+  background-color: $sub-color;
+  @include mq(md){
+    padding: rem(64) 0 rem(104) 0;
+  }
+}
+
+.bl_service .el_sec_mainTtl {
+  margin-bottom: rem(23.48);
+  @include mq(md){
+    margin-bottom: rem(80);
+  }
+}
